@@ -144,4 +144,44 @@ smembers java-js
 4
 
 
+zadd products 0 books
+1
+zadd products 0 iphone 0 tv
+2
 
+zincrby products 1 books
+1
+zincrby products 1 iphone
+1
+zincrby products 1 iphone
+2
+zincrby products 1 tv
+1
+zrange products 0 -1
+books
+tv
+iphone
+
+zrange products -1 -1
+iphone
+
+zrange products 0 0 rev
+iphone
+
+zrange products 0 1 rev withscores
+iphone
+3
+books
+2
+
+zrank products books
+1
+zrank products iphone
+2
+zrevrank products iphone
+0
+zscore products iphone
+3
+zpopmax products
+iphone
+3
