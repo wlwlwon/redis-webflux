@@ -3,6 +3,10 @@
 
 Redis 명령어 정리
 
+docker - compose up
+
+docker exec -it redis bash
+redis-cli
 
 flushdb
 
@@ -185,3 +189,11 @@ zscore products iphone
 zpopmax products
 iphone
 3
+
+incr user:1:balance 
+decr user:2:balance
+
+mulit -> tansaction mode
+discard -> rollback
+
+bgsave -> snapshot
