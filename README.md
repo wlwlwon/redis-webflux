@@ -1,6 +1,5 @@
 # redis-webflux
 
-This repository contains the code samples With Spring WebFlux
 
 Redis 명령어 정리
 
@@ -129,7 +128,20 @@ sunion skill:java skill:js
 3
 4
 
+sadd candidate:criminal 4 5 6
+3
 
+sdiff skill:java cancidate:creiminal
+1
+2
+3
+
+sinterstore java-js skill:java skill:js
+3
+smembers java-js
+2
+3
+4
 
 
 
